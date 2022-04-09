@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+    background-position:center;
+    background-size: cover;
+}
+h4{
+    background-color: rgb(29, 127, 255);
+    padding: 5px;
+    text-align: center;
+    color: white;
+    border:2px ridge rgb(131, 189, 255);
+    font-size: 1.2em; 
+    border-radius: 8px;
+    margin: 5px;
+}
+.grupo{
+    padding-top: 12px;
+    margin: auto;
+
+}
+.agregaalumnos{
+    background-color: turquoise;
+    width: 50%;
+    height: 60%;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    border-radius: 8px;
+    border: 3px solid lightgray;
+}
+
+form label{
+    padding: 4px;
+
+    
+}
+form label:hover{
+    background-color: rgb(55, 225, 255);
+    border:2px ridge rgb(80, 161, 255);
+
+
+}
+form label:hover{
+    background-color: rgb(55, 225, 255);
+    border:2px ridge rgb(80, 161, 255);
+}
+
+#cancelar{
+    background-color: darkcyan;
+    width: 60px;
+    height: 25px;
+    padding: 2px;
+    position: relative;
+    left: 190px;
+    top: -24px;
+    border: 1px solid black;
+}
+
+#cancela{
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+#guardar{
+    background-color: darkcyan;
+    width: 60px;
+    height: 25px;
+    padding: 2px;
+    position: relative;
+    left: 120px;
+    border-radius: 6px;
+}
+
+#guardar:hover,#cancelar:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 2px inset black;
+}
+
+.imgtempo{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right:20px;
+    top:170px;
+    border: 1px solid cornflowerblue;
+    box-shadow: 3px 3px 3px white,
+    6px 6px 6px black,
+    -3px -3px 3px white,
+    -6px -6px 6px black;
+}
+
+.contenedor{
+    width:85%;
+    margin:auto;
+    border: 3px solid white;
+    display:grid;
+    position:relative;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    padding:10px;
+    gap:10px;
+    grid-template-columns: repeat(3,auto);
+
+
+}
+select{
+    margin-right: 40px;
+}
+.a{
+    height:250px;
+    position:relative;
+    display:grid;
+    gap:10px;
+    padding:5px;
+    box-shadow:4px 4px 4px black;
+    grid-template-columns: auto 150px;
+    grid-template-rows: 180px 180px;
+    background-color: rgb(6, 255, 131);
+}
+
+img{
+    width:90%;
+    height:95px;
+    padding-top:5px;
+    box-shadow: 2px 2px 2px black;
+}
+.boton{
+    text-decoration:none;
+    background-color: rgb(50, 248, 255);
+    padding:10px;
+    border-radius:5px;
+    color: black;
+    width:200px;
+    height:25px;
+    margin: auto;
+    box-shadow: 3px 3px 3px inset white;
+}
+
+.botones{
+    background-color: rgb(102, 255, 0);
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+.beditar,.beliminar{
+    position: relative;
+    border-radius: 5px;
+padding-top: 5px;
+    margin-left: 30px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    color: black;
+    background-color: cadetblue;
+
+}
+.a > a{
+    position: relative;
+    bottom: 0;
+}
+@media (max-width:850px){
+    .contenedor{
+        grid-template-columns: repeat(2,auto);
+    }
+}
+@media(max-width:500px) {
+
+    
+}

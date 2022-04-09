@@ -1,0 +1,176 @@
+#Viajes{
+    background: linear-gradient(to right, hsl(199, 100%, 50%), hsl(229, 100%, 55%));
+    width: 35%;
+    height: 90%;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 5px 5px 8px black;
+}
+
+.qs2{
+    padding: 40px;
+    width: 100%;
+    margin-left: 5%;
+    overflow: hidden;
+    display: flex;
+}
+.qsa{
+    width: 100%;
+    margin-left: 5%;
+}
+.qs{
+    padding: 30px;
+    width: 100%;
+    margin-left: 5%;
+    overflow: hidden;
+    display: flex;
+
+}
+.qst{
+    color: blue;
+    margin-right: -8%;
+    
+}
+.imp{
+    width: 100%;
+    margin-left: 5%;
+}
+.ben{
+    list-style: none;
+    width: 100%;
+    margin-right: 3%;
+}
+
+.tsn{
+    background-color: rgb(224, 222, 217);
+    width: 100%;
+    
+}
+
+.ule{
+    list-style: none;
+    width: 100%;
+    margin-left: -15%;
+}
+.agregar{
+    
+    background: linear-gradient(to right, hsl(197, 100%, 67%), hsla(49, 78%, 60%, 0.664));
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+.vuelo{
+    width: 30%;
+    height: 15%;
+    margin-left: 35%;
+    transition: all 1s ease-in-out;
+}
+.vuelo:hover{
+    cursor: pointer;
+    transform: translate(2000px,30px) rotate(-8000deg);
+}
+
+.lblagregar{margin-left: 40%;
+}
+
+h4{
+    text-align: center;
+    background-color: rgb(90, 227, 252);
+    padding: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.producto{
+    padding: 8px;
+    position: relative;
+    left: 35px;
+}
+
+#guardar{
+    padding: 4px;
+    position: relative;
+    left: 38%;
+    width: 15%;
+    height: 5%;
+    background-color:rgb(143, 255, 91);
+    color: rgb(0, 0, 0);
+    box-shadow: 4px 4px 6px black;
+}
+
+#guardar:hover{
+    cursor: pointer;
+    box-shadow: inset 4px 4px 6px black;
+}
+
+table{
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+th{
+background-color: rgb(217, 255, 0);
+color: black
+}
+
+td{
+    text-align: center;
+    background-color: rgb(255, 243, 78);
+}
+
+tbody tr:nth-child(odd){
+background-color: rgb(255, 255, 255);
+}
+
+#modificar,#eliminar{
+    background-color: rgb(255, 19, 19);
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+    width: 85px;
+}
+
+#mensaje{
+    background-color: rgb(255, 233, 30);
+    color: rgb(0, 0, 0);
+    width: 250px;
+    margin: auto;
+}
+
+#listado{
+    width: 600px;
+    background-color: rgb(0, 255, 200);
+    height: 30px;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid white;
+}
+
+#btnAgrega{
+    box-shadow: 2px 2px 2px black;
+    margin-left: 38%;
+    background-color: rgb(53, 206, 253);
+    width: 17%;
+}
+
+#modal{
+    display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+#descrip{
+    height: 45%;
+    width: 60%;
+    text-align: start;
+}

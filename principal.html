@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="principal.css">
+	<link rel="stylesheet" href="streaming.css">
+	<link rel="stylesheet" href="footerp.css">
+	<link rel="stylesheet" href="slider.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+	<title>Amazon.com.mx: Precios bajos - Envío rápido - Millones de productos</title>
+	
+</head>
+<body>
+	<div class="nav">
+		<a href="#"><img class="logo" src="https://trustnet.com.mx/wp-content/uploads/sites/7/2020/09/39.-Amazon-anunciara-sus-nuevos-dispositivos-el-24-de-septiembre.png" alt=""></a>
+		<a><img src="https://thumbs.dreamstime.com/b/icono-de-compras-aislado-en-un-carro-con-fondo-blanco-elementos-ilustraci%C3%B3n-vectoriales-171077340.jpg" class="carrito" alt="Carrito"></a>
+		<p class="tcarrito">Carrito</p>
+		<FORM method=GET action="http://www.google.es/search">
+			<fieldset class="field" id="searchform">
+			<input type=text id="s" name="q"  size="35" />
+		  <button type="button" id="search"><img class="ibus" src="https://media.istockphoto.com/vectors/magnifying-glass-icon-search-find-seek-icon-vector-id1191133341?b=1&k=6&m=1191133341&s=170667a&w=0&h=_H6WOHcOm36kHLQqyaY2m5JSEOyeVXeTLhbpxT8WIAc="  style="cursor: pointer;"  width="25px" height="25px" alt="" ></button>
+		</fieldset>
+	</FORM>
+	</div> 
+	<nav class="menu" id="menu">
+		
+		<div class="contenedor contenedor-enlaces-nav">
+			<div class="btn-departamentos" id="btn-departamentos">
+				<p>Todos los <span>Departamentos</span></p>
+				<i class="fas fa-caret-down"></i>
+			</div>
+		
+			<div class="enlaces">
+				<a href="/cuenta.html">Cuenta</a>
+				<a href="/contacto.html">Ayuda</a>
+                <a href="/agregar.hbs">Comprar</a>
+                <a href="/agregar.html">Agregar productos</a>
+			</div>
+		</div><br><br>
+		<div class="contenedor contenedor-grid">
+			<div class="grid" id="grid">
+				<div class="categorias">
+					<button class="btn-regresar"><i class="fas fa-arrow-left"></i> Regresar</button>
+					<h3 class="subtitulo">Categorias</h3>
+
+					<a href="" data-categoria="tecnologia-y-computadoras">QUESOS<i class="fas fa-angle-right"></i></a>
+					<a href="#" data-categoria="ropa-y-accesorios">CARNES<i class="fas fa-angle-right"></i></a>
+					<a href="#" data-categoria="hogar-y-cocina">YOGURTHS<i class="fas fa-angle-right"></i></a>
+					<a href="#" data-categoria="juegos-y-juguetes">EMBUTIDOS<i class="fas fa-angle-right"></i></a>
+				</div>
+
+				<div class="contenedor-subcategorias">
+					<div class="subcategoria " data-categoria="tecnologia-y-computadoras">
+						<div class="enlaces-subcategoria">
+							<button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+							<h3 class="subtitulo">Tecnología y Computadoras</h3>
+							<a href="/laptops.html">Laptops</a>
+							<a href="/tablets.html">Tablets</a>
+							<a href="/cescritorio.html">Computadoras de Escritorio</a>
+						</div>
+
+						<div class="banner-subcategoria">
+							<a href="#">
+								<img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2021/06/quesos-caseros-como-preparar-marcoselihucastilloramirez.jpg" alt="" width="200px">
+							</a>
+						</div>
+						<div class="galeria-subcategoria">
+							<a href="#">
+								<img src="https://www.chedraui.com.mx/medias/7501020514469-00-CH1200Wx1200H?context=bWFzdGVyfHJvb3R8MTEzMDY4fGltYWdlL2pwZWd8aDczL2g1Yy8xMDY3MTY5MTMzMzY2Mi5qcGd8MTZkYjQzY2U2MGQ5NTk1MGNhZDhmODY4OTYxZGI3M2YwYWI5YTJlMTAyNmEyYzU0NmVjMTZlZDhkYjIzNTY4Mw" alt="a">
+							</a>
+							<a href="#">
+								<img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2019/03/que-es-en-realidad-el-queso-amarillo.jpg" alt="">
+							</a>
+							<a href="#">
+								<img src="https://pastitalia.com/wp-content/uploads/2020/12/queso-parmesano-rallado-y-la-cuna-en-el-fondo-blanco.jpg" alt="">
+							</a>
+							<a href="#">
+								<img src="https://ingredienta.com/wp-content/uploads/2019/10/queso-montana-ing.jpg" alt="">
+							</a>
+						</div>
+					</div>
+
+
+					<div class="subcategoria" data-categoria="ropa-y-accesorios">
+						<div class="enlaces-subcategoria">
+							<button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+							<h3 class="subtitulo">Ropa y Accesorios</h3>
+							<a href="/ropa.html">Ropa</a>
+							<a href="/zapatos.html">Zapatos</a>
+							<a href="/relojes.html">Relojes</a>
+						</div>
+
+						<div class="banner-subcategoria">
+							<a href="#">
+								<img src="https://magazine.medlineplus.gov/images/uploads/main_images/red-meat-v2.jpg" alt="">
+							</a>
+						</div>
+
+						<div class="galeria-subcategoria">
+							<a href="#">
+								<img src="https://media.justo.mx/__sized__/products/10._Hamburguesas-thumbnail-540x540-70.jpg" alt="">
+							</a>
+							<a href="#">
+								<img src="https://media.justo.mx/__sized__/products/2010141-thumbnail-540x540-70.jpg" alt="">
+							</a>
+							<a href="#">
+								<img src="https://media.justo.mx/products/iStock-1257693783.jpg" alt="">
+							</a>
+							<a href="#">
+								<img src="https://www.gastronomiavasca.net/uploads/image/file/3283/fiambre_jamon_cocido.jpg" alt="">
+							</a>
+						</div>
+					</div>
+
+					<div class="subcategoria" data-categoria="hogar-y-cocina">
+						<div class="enlaces-subcategoria">
+							<button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+							<h3 class="subtitulo">Hogar y Cocina</h3>
+							<a href="/cocina.html">Cocina</a>
+							<a href="/electrodo.html">Electrodomesticos</a>
+							<a href="/limpieza.html">Limpieza</a>
+						</div>
+
+						<div class="banner-subcategoria">
+							<a href="#">
+								<img src="https://www.cocinayvino.com/wp-content/uploads/2016/05/yogurt-casero-e1469139757728-1200x675.jpg" alt="">
+							</a>
+						</div>
+
+						<div class="galeria-subcategoria">
+							<a href="#">
+								<img src="https://www.chedraui.com.mx/medias/7501032398576-00-CH1200Wx1200H?context=bWFzdGVyfHJvb3R8NTQyMTZ8aW1hZ2UvanBlZ3xoMmQvaDM3LzExMzA2OTc1NDI4NjM4LmpwZ3w2Nzk3ZDI2N2EzZDQ3MjJiNThmYzRmZTViMTM3ZjExNGIzZTZmNjgwNTE2YzdiZTY0YTg5MTAyYThhMWMwOWNj" alt="">
+							</a>
+							<a href="#">
+								<img src="https://www.heb.com.mx/media/catalog/product/cache/9f5ec31302878493d9ed0ac40a398e12/7/2/721656_2064528704.jpg" alt="">
+							</a>
+							<a href="#">
+								<img src="https://www.heb.com.mx/media/catalog/product/cache/9f5ec31302878493d9ed0ac40a398e12/7/5/7501020561159_image.jpg" alt="">
+							</a>
+							<a href="#">
+								<img src="https://static.merqueo.com/images/products/large/4f1c3951-3002-4128-9bd0-a85fb9bb71e0.jpg" alt="">
+							</a>
+						</div>
+					</div>
+
+					<div class="subcategoria" data-categoria="juegos-y-juguetes">
+						<div class="enlaces-subcategoria">
+							<button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+							<h3 class="subtitulo">Juegos y Juguetes</h3>
+							<a href="/juguetes.html">Juguetes</a>
+							<a href="/jmesa.html">Juegos de Mesa</a>
+							<a href="/faccion.html">Figuras de Accion</a>
+						</div>
+
+						<div class="banner-subcategoria">
+							<a href="#">
+								<img src="https://imagenes.milenio.com/avWsjPoQ13PHh4qFOjG5cIh1T8o=/300x186/https://www.milenio.com/uploads/media/2020/08/04/profeco-presenta-estudio-marcas-salchicha.jpg" alt="">
+							</a>
+						</div>
+						<div class="galeria-subcategoria">
+							<a href="#">
+								<img src="https://www.chedraui.com.mx/medias/7501040009839-00-CH1200Wx1200H?context=bWFzdGVyfHJvb3R8MTAyOTI5fGltYWdlL2pwZWd8aDMxL2gyYy8xMDY2MTEzNzcxMTEzNC5qcGd8ZWYyZWM5ODBmMWM2MzBlZmY4NzNlYzZhMjhiMWE5NDIzNzM3NThjZWY4MjMzMmVkZGVlZDQxOWUyOTY2NWVkNQ" alt="">
+							</a>
+							<a href="#">
+								<img src="https://s.cornershopapp.com/product-images/3889695.png?versionId=WeMbklKd99hQRQC07ZCOBFUz8QuI3U58" alt="">
+							</a>
+							<a href="#">
+								<img src="https://bonnacarne.com/wp-content/uploads/2020/05/Bonnacarne-Productos_Nu-tres_Tocino-rebanado.jpg" alt="">
+							</a>
+							<a href="#">
+								<img src="https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/gr/images/product-images/img_large/00750104000542L.jpg" alt="">
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<hr 1px color="black">
+		<div id="navSwmHoliday" style="height: 39px; width: 400px; overflow: hidden; position: relative; margin-left: 74%; ">
+			<a aria-label="Prime Video" href="https://www.primevideo.com/143-9663387-2977168">
+			<img alt="Prime Video" src="https://images-na.ssl-images-amazon.com/images/G/33/digital/video/magellan/country/Mexico/swm1._CB485922612_.jpg">
+	</nav><br>
+	<main class="contenedor">
+		<article>
+			
+			<div class="wrapper">
+				<div class="slider" id="slider">      
+					<ul class="slides">       
+						<li class="slide" id="slide1">
+							<a href="#">
+								<img src="https://images-na.ssl-images-amazon.com/images/G/33/em/pd21/xcm_em_Prime_Day_2021_856-MXES_D_PDS-HP-Tall-Hero_1500x600._CB667247345_.jpg" >      
+							</a>
+						</li>
+						<li class="slide" id="slide2">
+							<a href="#">
+								<img src="https://images-na.ssl-images-amazon.com/images/G/33/digital/video/merch/TV/DBZV_S2_GWBleedingHero_1500x600_POST_Final_PVD6851_NewEpisodes._CB667160211_.jpg" >      
+							</a>
+						</li>
+						<li class="slide" id="slide3">
+							<a href="#">
+								<img src="https://images-na.ssl-images-amazon.com/images/G/33/kindle/journeys/ZTk1ZDJkMzYt/ZTk1ZDJkMzYt-M2RjZmQ0ZTct-w1500._CB655464260_.jpg" >      
+							</a>
+						</li>
+						<li class="slide" id="slide4">
+							<a href="#">
+								<img src="https://images-na.ssl-images-amazon.com/images/G/33/em/pd21/xcm_em_prime_day_2021_775-mxes_d_hp_tallhero_lifestyle_1500x600._CB667417388_.jpg" >      
+							</a>
+						</li>     
+						<li class="slide" id="slide5">
+							<a href="#">
+								<img src="https://images-na.ssl-images-amazon.com/images/G/33/AmazonMusic/2021/Marketing/SW_PrimeDay2021/4MoFree/Gateway/DV1/MX-ES_041921_PD4MonthsFREE_ACQ_GW_Hero_D_1500x600_CV1a._CB668877990_.jpg" >      
+							</a>
+						</li>  
+						<li class="slide" id="slide6">
+							<a href="#">
+								<img src="https://images-na.ssl-images-amazon.com/images/G/33/digital/video/merch/tvod/service_level/DESKTOP_TALL_HERO_1X_4231_Educational_ES_1500x600._CB670277506_.jpg" >      
+							</a>
+						</li>               
+					</ul>
+					<ul class="slider-controler">         
+						<li><a href="#slide1">&bullet;</a></li>
+						<li><a href="#slide2">&bullet;</a></li>
+						<li><a href="#slide3">&bullet;</a></li>
+						<li><a href="#slide4">&bullet;</a></li>
+						<li><a href="#slide5">&bullet;</a></li>
+						<li><a href="#slide6">&bullet;</a></li>
+					</ul>
+				</div>
+			</div>
+			<br><br>
+			<hr 3px black><br><br>
+              <hr size="2px" color="white">
+    <section class="galeria">
+        <div class="contenedor">
+            <h2 class="titulo">Atracciones Turisticas mas Populares del Mundo</h2>
+            <div class="galeria-port">
+                <div class="imagenes">
+                    <img src="https://content.skyscnr.com/m/747b83ab736f8e6b/original/GettyImages-515722479_doc.jpg?resize=1800px:1800px&quality=100" alt="Error">
+                    <div class="hover-galeria">
+                        <p>Machu Picchu, Perú</p>
+                    </div>
+                </div>
+                <div class="imagenes">
+                    <img src="https://content.skyscnr.com/7805c7de6f4e7816a4fe0a7cc386969e/GettyImages-183633046.jpg" alt="Error">
+                    <div class="hover-galeria">
+                        <p>Stonehenge, Reino Unido</p>
+                    </div>
+                </div>
+                <div class="imagenes">
+                    <img src="https://content.skyscnr.com/e9f18d98773d244ceef7d45bc67f6ef8/GettyImages-523665439.jpg" alt="Error">
+                    <div class="hover-galeria">
+                        <p>Cristo Redentor, Brasil</p>
+                    </div>
+                </div>
+                <div class="imagenes">
+                    <img src="https://content.skyscnr.com/28f9e38f288581eea0a2c2cd73016f9e/GettyImages-177102278.jpg" alt="Error">
+                    <div class="hover-galeria">
+                        <p>Acrópolis de Atenas, Grecia</p>
+
+                    </div>
+                </div>
+                <div class="imagenes">
+                    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/aa/fc.jpg" alt="Error">
+                    <div class="hover-galeria">
+                        <p>Torre Eiffel, Francia</p>
+                    </div>
+                </div>
+                <div class="imagenes">
+                    <img src="https://content.skyscnr.com/0fb8578abe113048d7ee9a9873dafe92/GettyImages-176421733.jpg" alt="Error">
+                    <div class="hover-galeria">
+                        <p>La Gran Muralla China</p>
+                    </div>
+                </div>
+                <div class="imagenes">
+                    <img src="https://content.skyscnr.com/73b2d0e7d3be0bb696808efda2ce7227/GettyImages-460860677.jpg" alt="Error">
+                    <div class="hover-galeria">
+                        <p>Pirámide de Giza, Egipto</p>
+                    </div>
+                </div>
+                <div class="imagenes">
+                    <img src="https://content.skyscnr.com/1fa5a5edc230fb4400ea1faf394e49b3/GettyImages-463497475.jpg" alt="Error">
+                    <div class="hover-galeria">
+                        <p>Cataratas del Niágara</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </section>
+              <br><br>
+			  <hr 3px black> <br><br>
+			<main>
+				<div class="pelicula-principal">
+					<a class="contenedor">
+						<h2 class="titulo">Army of the Dead</h2>
+						<p class="descripcion">
+							En el mismo momento en que se produce una epidemia de zombis en Las Vegas, un grupo de mercenarios se adentra en la zona en cuarentena para cometer el mayor atraco realizado en la historia de la ciudad del pecado.
+
+						</p>
+						<a href="/trailerp.html" class="botona">
+				<button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
+			</a>
+			<a href="https://www.imdb.com/title/tt0993840/" class="botona"></href>
+						<button role="button" class="boton2"><i class="fas fa-info-circle"></i>Más información</button>
+					</a>
+					</div>
+				</div><br>
+				<hr 3px black><br><br>
+			<div class="peliculas-recomendadas contenedor">
+				<div class="contenedor-titulo-controles">
+					<h2 style="margin-left: 35%;" >Peliculas Recomendadas</h2>
+					<div class="indicadores"></div>
+				</div>
+				<div class="contenedor-principal">
+					<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+	
+					<div class="contenedor-carousel">
+						<div class="carousel">
+							<div class="pelicula">
+								<a href="#"><img src="https://pics.filmaffinity.com/Godzilla_vs_Kong-370227109-large.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://pics.filmaffinity.com/Mortal_Kombat-143448809-large.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://lumiere-a.akamaihd.net/v1/images/image_95b79098.jpeg?region=0,0,540,810&width=480" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://pics.filmaffinity.com/Las_Brujas_de_Roald_Dahl-216035998-large.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="data:image/jpeg;base64,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" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://pics.filmaffinity.com/Tenet-432994986-large.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://www.mixup.com.mx/Mixup/ImgMixup/Mixup_big/7506005982844.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://pics.filmaffinity.com/Joker-790658206-large.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://pics.filmaffinity.com/Wonder_Woman_1984-686758013-large.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://es.web.img3.acsta.net/pictures/21/05/10/17/08/4185043.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://i.pinimg.com/originals/5e/9e/cd/5e9ecd1e1ae0e8c2893f39e382ade39a.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://pics.filmaffinity.com/Annabelle_vuelve_a_casa-105571611-large.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://images-na.ssl-images-amazon.com/images/I/41dD6YQmPOL._AC_SY450_.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://i.pinimg.com/736x/e4/d0/2b/e4d02b21f1ef37c3b542fe36913abaaf.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://www.aceprensa.com/wp-content/uploads/elementor/thumbs/373571-0-ov16rcmzjqmn8o3f4cpmasoe0169r1nwdt53u3kb28.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://4shooters.files.wordpress.com/2017/05/fotos-final-3-28-x-43-2.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://i.pinimg.com/originals/45/c5/ae/45c5ae6ce44f7774f28451c0cf5fa747.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/11/aquaman-2-2136689.jpg?itok=v7TH_3E8" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://diariodelcineasta.com/wp-content/uploads/2015/12/la-quinta-ola-cartel223.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://basededatos.atrae.org/media/works/4q2NNj4S5dG2RLF9CpXsej7yXl_CHL6K60.jpg" alt=""></a>
+							</div>
+							<div class="pelicula">
+								<a href="#"><img src="https://pics.filmaffinity.com/It_Cap_tulo_2-844935737-large.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+	
+					<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+				</div>
+			</div>
+</article>
+	</main>
+	
+<div class="pull-right toggle-right-sidebar">
+	<span class="fa title-open-right-sidebar tooltipstered fa-angle-double-right"></span>
+	</div>
+	
+	<div id="right-sidebar" class="right-sidebar-notifcations nav-collapse">
+	<div class="bs-example bs-example-tabs right-sidebar-tab-notification" data-example-id="togglable-tabs">
+	
+		<div id="w3lDemoBar" class="w3l-demo-bar">
+			<div class="demo-btns">
+			<a href="">
+				<span class="w3l-icon -back">
+					<span class="fa fa-arrow-left"></span>
+				</span>
+				<span class="w3l-text">Regresar</span>
+			</a>
+			<a href="https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping
+			">
+				<span class="w3l-icon -download">
+					<span class="fa fa-download"></span>
+				</span>
+				<span class="w3l-text">Descargar</span>
+			</a>
+			<a href="https://www.amazon.com.mx/" class="no-margin-bottom-mobile">
+				<span class="w3l-icon -buy">
+					<span class="fa fa-shopping-cart"></span>
+				</span>
+				<span class="w3l-text">Comprar</span>
+			</a>
+		</div>
+		</div>
+		<div class="right-sidebar-panel-content animated fadeInRight" tabindex="5003"
+			style="overflow: hidden; outline: none;">
+		</div>
+	</div>
+	</div>
+	</div>
+	<div class="social">
+		<ul>
+			<li ><a href="https://www.facebook.com/amazonmex/" target="_blank" class="fab fa-facebook-square"></a></li>
+			<li ><a href="https://twitter.com/amazonmex?lang=es" target="_blank" class="fab fa-twitter-square"></a></li>
+			<li ><a href="https://www.instagram.com/amazonmex/?hl=es-la" target="_blank" class="fab fa-instagram"></a></li>
+			<li ><a href="https://www.snapchat.com/add/amazon" class="fab fa-snapchat-square"></a></li>
+		</ul>
+	</div>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+	<script src="principal.js"></script>
+	<script src="reloj.js"></script>
+	<script src="streaming.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script>
+		focusMethod = function getFocus() {
+		document.getElementById("s").focus();
+	  }
+	</script>
+</body>
+<footer>
+	<div class="container-footer-all">
+	<div class="container-body">
+		<div class="column1">
+			<h1>Acerca de Cremeria El Cuate</h1>
+			<p>
+				La innovación tecnológica es la base para la expansión de Amazon y permite a los clientes tener más y más categorías de productos, adaptados a sus necesidades y a un precio más bajo. Ofrecemos experiencia de compra personalizada: por ejemplo, nuestros clientes pueden comprar rápidamente, con el "Pedido 1-Clic" y utilizar diversas herramientas, tales como consejos para descubrir nuevos productos.
+				La plataforma de Amazon
+				La evolución de la página web de Amazon está determinada por nuestro deseo de innovar constantemente, que siempre ha formado parte del ADN de nuestra compañía. El comercio electrónico se encuentra todavía en una etapa temprana. </p>
+
+		</div>
+		<div class="column2">
+			<h1>Siguenos en</h1>
+			<div class="rown1">
+				<img src="https://img.icons8.com/color/452/amazon-prime-video.png" alt="">
+				<label for="">Amazon Prime Video</label>
+			</div>
+			<div class="rown1">
+				<img src="https://w7.pngwing.com/pngs/362/706/png-transparent-amazon-com-gift-card-computer-icons-retail-amazon-prime-amazon-miscellaneous-text-retail-thumbnail.png" alt="">
+				<label for="">Amazon Music</label>
+			</div>
+
+		</div>
+		<div class="column3">
+			<h1>Informacion Contacto</h1>
+			<div class="rown2">
+				<img src="https://png.pngtree.com/element_our/md/20180516/md_5afc6f6f0d492.jpg" alt="">
+				<label for="">Cremeria El Cuate</label>
+			</div>
+			<div class="rown2">
+				<img src="https://thumbs.dreamstime.com/b/icono-del-tel%C3%A9fono-en-blanco-y-negro-s%C3%ADmbolo-ilustraci%C3%B3n-vector-132728260.jpg" alt="">
+				<label for="">+462</label>
+			</div>
+			<div class="rown2">
+				<img src="https://previews.123rf.com/images/yupiramos/yupiramos1705/yupiramos170514477/77978169-correo-electr%C3%B3nico-o-correo-icono-s%C3%ADmbolo-de-la-ilustraci%C3%B3n-vectorial-de-dise%C3%B1o-gr%C3%A1fico.jpg" alt="">
+				<label for="">Cesarruizzapien@hotmail.com</label>
+			</div>
+		</div>
+		
+	</div>
+	<div class="container-footer">
+		<div class="footer">
+			<div class="copyright">EL CUATE PRODUCTIONS ©2022
+			</div>
+		
+		<div class="information">
+		<a href="https://www.amazon.es/Acerca-Amazon-Descubre-Nuestra-Empresa-Nuestra-Tecnologia/b?ie=UTF8&node=1323175031">Informacion de la Compañia</a>|
+		<a href="https://www.amazon.com.mx/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ#:~:text=Utilizamos%20sus%20datos%20personales%20para%20mostrar%20anuncios%20basados%20en%20intereses,mostrar%20anuncios%20basados%20en%20intereses.">Privacidad y Politica</a>|
+		<a href="https://www.amazon.com.mx/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM#:~:text=No%20est%C3%A1%20permitido%20el%20uso%20de%20direcciones%20de%20correo%20falsas,eliminar%20o%20modificar%20dicho%20contenido.">Terminos y Condiciones</a>
+		</div>
+	</div>
+	</div>
+	</div>
+</footer>
+</html>
